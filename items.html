@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evenly Aligned Two-Row Grid Layout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('back3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns */
+            grid-template-rows: repeat(2, auto); /* Two rows */
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            background: #FFECB3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeIn 0.8s forwards, float 3s ease-in-out infinite;
+        }
+
+        /* Staggered fade-in effect */
+        .card:nth-child(1) { animation-delay: 0.2s; }
+        .card:nth-child(2) { animation-delay: 0.4s; }
+        .card:nth-child(3) { animation-delay: 0.6s; }
+        .card:nth-child(4) { animation-delay: 0.8s; }
+        .card:nth-child(5) { animation-delay: 1s; }
+        .card:nth-child(6) { animation-delay: 1.2s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Float animation for gentle hovering effect */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            color: #333;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .card-text {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .btn-custom {
+            background-color: #FF6347;
+            color: #fff;
+            border-radius: 20px;
+            padding: 5px 12px;
+            font-size: 12px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff4b3a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="mobiles.jpg" class="card-img-top" alt="Mobiles">
+            <div class="card-body">
+                <h5 class="card-title">Mobile Phones</h5>
+                <p class="card-text">Exciting loot of latest models</p>
+                <p class="price">Starting at ₹9,999</p>
+                <button class="btn btn-custom">Buy now</button>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="laptops.jpg" class="card-img-top" alt="Laptops">
+            <div class="card-body">
+                <h5 class="card-title">Laptops</h5>
+                <p class="card-text">Latest trendy models</p>
+                <p class="price">Starting at ₹19,999</p>
+                <button class="btn btn-custom">Buy now</button>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="earphones.jpg" class="card-img-top" alt="Earphones">
+            <div class="card-body">
+                <h5 class="card-title">Earphones</h5>
+                <p class="card-text">Cool looking latest picks</p>
+                <p class="price">Starting at ₹599</p>
+                <button class="btn btn-custom">Buy now</button>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="tv.jpg" class="card-img-top" alt="Television">
+            <div class="card-body">
+                <h5 class="card-title">Television</h5>
+                <p class="card-text">"Experience Cinema at Home"</p>
+                <p class="price">Starting at ₹8,999</p>
+                <button class="btn btn-custom">Buy now</button>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="camera.jpg" class="card-img-top" alt="Camera">
+            <div class="card-body">
+                <h5 class="card-title">Cameras</h5>
+                <p class="card-text">"See the World Through a New Lens!"</p>
+                <p class="price">Starting at ₹14,999</p>
+                <button class="btn btn-custom">Buy now</button>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="fridge.jpg" class="card-img-top" alt="Fridges">
+            <div class="card-body">
+                <h5 class="card-title">Refrigerators</h5>
+                <p class="card-text">"Fresh Food, Happy Home!"</p>
+                <p class="price">Starting at ₹11,999</p>
+                <button class="btn btn-custom">Buy now</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
