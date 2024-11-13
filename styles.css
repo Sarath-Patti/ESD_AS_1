@@ -1,10 +1,10 @@
-/* Fixed Navbar */
+
 
 .navbar {
     background: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background */
+    
     z-index: 3;
-    /* Keeps navbar on top */
+   
 }
 
 .navbar-brand {
@@ -16,7 +16,7 @@
 
 .navbar-brand:hover {
     color: blue;
-    /* Highlight color on hover */
+   
 }
 
 .nav-link {
@@ -27,16 +27,16 @@
 
 .nav-link:hover {
     color: #ff4d4d;
-    /* Highlight color on hover */
+    
 }
 
 
-/* Hero Section */
+
 
 .hero-section {
     position: relative;
     background-image: url('back4.jpg');
-    /* Ensure this path is correct */
+    
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -46,7 +46,7 @@
     color: white;
     text-align: center;
     padding-top: 80px;
-    /* Space to avoid overlap with fixed navbar */
+    
 }
 
 .overlay {
@@ -56,7 +56,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    /* Dark overlay for better text visibility */
+    
     z-index: 1;
 }
 
@@ -83,7 +83,7 @@
 }
 
 
-/* Media Queries for Responsiveness */
+
 
 @media (max-width: 768px) {
     .hero-content h1 {
@@ -95,7 +95,7 @@
 }
 
 
-/* Background styling */
+
 
 .background {
     background: url('background.jpeg') no-repeat center center/cover;
@@ -106,11 +106,11 @@
 }
 
 
-/* Form container styling */
+
 
 .form-container {
     background-color: rgba(255, 255, 255, 0.9);
-    /* Semi-transparent background */
+    
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -119,7 +119,7 @@
 }
 
 
-/* Form title */
+
 
 .form-title {
     text-align: center;
@@ -129,7 +129,7 @@
 }
 
 
-/* Input and button styling */
+
 
 .form-control {
     border-radius: 4px;
@@ -163,7 +163,7 @@
 }
 
 
-/* Link styling */
+
 
 a {
     color: #ff5a5f;
@@ -179,4 +179,3 @@ a:hover {
 }
 
 
-/* Container to center the cards and make them move together */
